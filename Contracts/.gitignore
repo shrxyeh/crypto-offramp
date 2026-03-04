@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Foundry build output
+out/
+cache/
+broadcast/
+
+# Dependencies (restore with: forge install)
+lib/
+
+# Coverage
+lcov.info
+coverage/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Misc
+*.pem

@@ -1,0 +1,39 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "contractAddress": "0xe2556390437184eCC29D344b562C60F108c2778A",
+  "deployer": "0x8Dc3e6D64d4989aE0Dee1017aE6CFDd4d655139d",
+  "owner": "0x8Dc3e6D64d4989aE0Dee1017aE6CFDd4d655139d",
+  "deploymentTimestamp": "2025-11-22T09:19:00.486Z",
+  "blockNumber": 9681796,
+  "transactionHash": "0xa4c09e13579e7986d89c52c1bf8fb106addec569aaa40c7d88462a737621b680",
+  "constructorArgs": [
+    "0x8Dc3e6D64d4989aE0Dee1017aE6CFDd4d655139d"
+  ],
+  "supportedTokens": {
+    "USDC": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+    "USDT": "0xaA8E23Fb1079EA71e0a56F48a2aA51851D8433D0"
+  },
+  "initialSettlers": [
+    "0x8Dc3e6D64d4989aE0Dee1017aE6CFDd4d655139d"
+  ],
+  "contractConfig": {
+    "platformFeeBps": 50,
+    "settlerFeeBps": 0,
+    "minOrderAmount": "1 USDC",
+    "maxOrderAmount": "100,000 USDC",
+    "orderTimeout": "30 minutes",
+    "settlementTimeout": "15 minutes",
+    "orderCooldown": "10 seconds",
+    "maxDailyOrders": 100,
+    "feeOnTransferSupported": false,
+    "note": "Settlers receive full crypto amount minus 0.5% platform fee only"
+  },
+  "compiler": {
+    "version": "0.8.20",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  }
+}

@@ -76,17 +76,27 @@ npm run dev
 ### 4. Smart Contract (optional — for deployment)
 
 ```bash
+# Install Foundry (once)
+curl -L https://foundry.paradigm.xyz | bash && foundryup
+
 cd Contracts
-npm install
-npx hardhat compile
-npx hardhat run scripts/deploy.js --network base
-```
+forge install        # installs forge-std and openzeppelin-contracts
 
-To add a settler after deployment:
+# Compile
+forge build
 
-```bash
-# Edit scripts/addSettler.js with the settler address, then:
-npx hardhat run scripts/addSettler.js --network base
+# Test
+forge test
+
+# Deploy (e.g. Base mainnet)
+source .env
+forge script script/Deploy.s.sol --rpc-url $BASE_RPC_URL --broadcast --verify
+
+# Add a settler
+forge script script/AddSettler.s.sol --rpc-url $BASE_RPC_URL --broadcast
+
+# Remove a settler
+forge script script/RemoveSettler.s.sol --rpc-url $BASE_RPC_URL --broadcast
 ```
 
 ## API Reference

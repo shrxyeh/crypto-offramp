@@ -1,0 +1,24 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "contractAddress": "0x473137A2931dD10bb01fe2000C538f5d7ab70878",
+  "deployer": "0x8Dc3e6D64d4989aE0Dee1017aE6CFDd4d655139d",
+  "backendService": "0x6f4Ee73c5Fee85Be4b7Be92c16F901814271Aa63",
+  "deploymentTimestamp": "2025-11-12T05:46:49.252Z",
+  "blockNumber": 9612097,
+  "transactionHash": "0x0bf3df0ca7847f9028522662685b2f092d3f5f74b11c732017e7a894b29a9fff",
+  "constructorArgs": [
+    "0x6f4Ee73c5Fee85Be4b7Be92c16F901814271Aa63"
+  ],
+  "supportedTokens": {
+    "USDC": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+    "USDT": "0xaA8E23Fb1079EA71e0a56F48a2aA51851D8433D0"
+  },
+  "compiler": {
+    "version": "0.8.20",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  }
+}
