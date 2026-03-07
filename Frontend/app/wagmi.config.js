@@ -1,17 +1,24 @@
 'use client';
 
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { injectedWallet, walletConnectWallet, coinbaseWallet, rainbowWallet } from '@rainbow-me/rainbowkit/wallets';
 import { base, mainnet, sepolia } from 'wagmi/chains';
 
 export const config = getDefaultConfig({
-  appName: 'KrizPay',
+  appName: 'crypto-offramp',
   projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || 'YOUR_PROJECT_ID',
   chains: [
     base,
     mainnet,
     ...(process.env.NODE_ENV === 'development' ? [sepolia] : []),
   ],
-  ssr: true,
+  wallets: [
+    {
+      groupName: 'Popular',
+      wallets: [injectedWallet, walletConnectWallet, coinbaseWallet, rainbowWallet],
+    },
+  ],
+  ssr: false,
 });
 
 export const CONTRACT_ADDRESSES = {

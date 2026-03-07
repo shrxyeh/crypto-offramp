@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "(sleep 5 && curl -s http://localhost:3000 > /dev/null 2>&1 && echo '✓ Page pre-compiled, ready to use') & next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -14,7 +14,6 @@
     "jsqr": "^1.4.0",
     "lucide-react": "^0.548.0",
     "next": "^14.2.5",
-    "qrcode.js": "^0.0.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "viem": "^2.38.6",
@@ -25,6 +24,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.21",
+    "baseline-browser-mapping": "^2.10.0",
     "eslint": "^8",
     "eslint-config-next": "^14.2.5",
     "postcss": "^8.5.6",

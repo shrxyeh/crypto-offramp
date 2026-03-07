@@ -718,7 +718,7 @@ app.use((error, req, res, next) => {
 
 async function main() {
   try {
-    logger.info(' Starting KrizPay P2P Backend (Read-Only)...');
+    logger.info(' Starting crypto-offramp Backend (Read-Only)...');
 
     const orderCount = await contract.getOrderCount();
     const owner = await contract.owner();
@@ -732,7 +732,7 @@ async function main() {
 
     app.listen(config.port, () => {
       logger.info('='.repeat(60));
-      logger.info(` KrizPay P2P Backend Running`);
+      logger.info(` crypto-offramp Backend Running`);
       logger.info('='.repeat(60));
       logger.info(`Port: ${config.port}`);
       logger.info(`Contract: ${config.contractAddress}`);

@@ -3,8 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount, useWriteContract, useWaitForTransactionReceipt, useReadContract } from 'wagmi';
-import { parseUnits, formatUnits, parseEventLogs } from 'viem';
-import { Camera, Wallet, ArrowRight, CheckCircle, XCircle, Loader2, QrCode, DollarSign, RefreshCw, X } from 'lucide-react';
+import { parseUnits, formatUnits } from 'viem';
+import { Camera, ArrowRight, CheckCircle, XCircle, Loader2, QrCode, DollarSign, RefreshCw, X } from 'lucide-react';
 import { CONTRACT_ADDRESSES, STABLECOIN_ADDRESSES, KRIZPAY_ABI, ERC20_ABI } from './wagmi.config';
 
 const API_BASE = process.env.NEXT_PUBLIC_BACKEND_API || 'http://localhost:3001/api';
@@ -233,7 +233,7 @@ function QRScanner({ onScanSuccess, onScanError, onClose }) {
   );
 }
 
-export default function KrizPayPage() {
+export default function CryptoOfframpPage() {
   const { address, isConnected, chain } = useAccount();
   const [step, setStep] = useState('scan');
   const [scanning, setScanning] = useState(false);
@@ -813,7 +813,7 @@ useEffect(() => {
         )}
         <div className="z-content max-w-md mx-auto px-4 py-10">
           <div className="text-center mb-8 animate-slide-up">
-            <h1 className="text-5xl font-bold text-gradient mb-1">KrizPay</h1>
+            <h1 className="text-5xl font-bold text-gradient mb-1">crypto-offramp</h1>
             <p className="text-white/40 text-sm">Crypto to INR, instantly</p>
           </div>
 

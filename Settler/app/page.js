@@ -270,7 +270,7 @@ export default function SettlerDashboard() {
                 <Shield className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h1 className="font-bold text-white leading-none">KrizPay Settler</h1>
+                <h1 className="font-bold text-white leading-none">crypto-offramp Settler</h1>
                 <p className="text-xs text-slate-500 mt-0.5">Settler Dashboard</p>
               </div>
             </div>
@@ -306,7 +306,7 @@ export default function SettlerDashboard() {
                 <XCircle className="w-8 h-8 text-red-400" />
               </div>
               <h3 className="text-white font-bold text-lg mb-2">Not Verified</h3>
-              <p className="text-slate-400 text-sm mb-4">Your wallet is not registered as a settler. Contact the KrizPay admin to get verified.</p>
+              <p className="text-slate-400 text-sm mb-4">Your wallet is not registered as a settler. Contact the crypto-offramp admin to get verified.</p>
               <p className="text-xs font-mono text-slate-500 bg-white/[0.04] rounded-lg p-3 break-all">{address}</p>
             </div>
           ) : (

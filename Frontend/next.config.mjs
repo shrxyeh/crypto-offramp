@@ -1,20 +1,31 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    optimizePackageImports: [
+      '@rainbow-me/rainbowkit',
+      'wagmi',
+      'viem',
+      'lucide-react',
+      '@tanstack/react-query',
+    ],
+  },
   webpack: (config) => {
-    config.resolve.fallback = { 
-      fs: false, 
-      net: false, 
+    config.resolve.fallback = {
+      fs: false,
+      net: false,
       tls: false,
       crypto: false,
     };
-    
-    // Fix for external dependencies (wagmi, viem, etc.)
+
+    // Stub heavy/React-Native modules not needed in browser
+    config.resolve.alias['@react-native-async-storage/async-storage'] = false;
+    config.resolve.alias['@metamask/sdk'] = false;
+
     config.externals.push('pino-pretty', 'lokijs', 'encoding');
-    
+
     return config;
   },
-  // Allow external scripts from CDN
   async headers() {
     return [
       {
@@ -28,7 +39,6 @@ const nextConfig = {
       },
     ];
   },
-  // Environment variables
   env: {
     NEXT_PUBLIC_BACKEND_API: process.env.NEXT_PUBLIC_BACKEND_API || 'http://localhost:3001/api',
   },
